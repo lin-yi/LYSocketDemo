@@ -66,7 +66,7 @@ static BOOL _isAllowToPrint = NO;
 
 @implementation TCPSocket
 
-static int const connectTimeOut = 4;
+static int const kConnectTimeOut = 4;
 
 static int const kReadTimeOut = -1;
 
@@ -84,7 +84,7 @@ static int const kReadDataTag = 0;
     NSError *error = nil;
     LYLog(@"开始连接到服务器");
     
-    if(![self.socket connectToHost:[self convertedHostFromHost:host] onPort:port error:&error]||error){
+    if(![self.socket connectToHost:[self convertedHostFromHost:host] onPort:port withTimeout:kConnectTimeOut error:&error] || error){
         LYLog(@"connet fail error: %@",error);
     }
 }
