@@ -17,6 +17,7 @@
 		B2DB9F092086F9E900DFE21B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DB9F082086F9E900DFE21B /* main.m */; };
 		B2E36AF620899BFC00878C61 /* SocketRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E36AF520899BFC00878C61 /* SocketRequest.m */; };
 		B2E36AF92089E6F800878C61 /* SocketPong.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E36AF82089E6F800878C61 /* SocketPong.m */; };
+		B2E36AFC208A184C00878C61 /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E36AFB208A184C00878C61 /* SocketManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		B2E36AF520899BFC00878C61 /* SocketRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketRequest.m; sourceTree = "<group>"; };
 		B2E36AF72089E6F800878C61 /* SocketPong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketPong.h; sourceTree = "<group>"; };
 		B2E36AF82089E6F800878C61 /* SocketPong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketPong.m; sourceTree = "<group>"; };
+		B2E36AFA208A184C00878C61 /* SocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
+		B2E36AFB208A184C00878C61 /* SocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
 		CCBC0372A589A2415502BA43 /* Pods-LYSocketDomo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSocketDomo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYSocketDomo/Pods-LYSocketDomo.debug.xcconfig"; sourceTree = "<group>"; };
 		E62F0593D35C3BF9FFFD78EE /* Pods-LYSocketDomo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSocketDomo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYSocketDomo/Pods-LYSocketDomo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +73,8 @@
 				B2E36AF520899BFC00878C61 /* SocketRequest.m */,
 				B2E36AF72089E6F800878C61 /* SocketPong.h */,
 				B2E36AF82089E6F800878C61 /* SocketPong.m */,
+				B2E36AFA208A184C00878C61 /* SocketManager.h */,
+				B2E36AFB208A184C00878C61 /* SocketManager.m */,
 			);
 			path = LYSocket;
 			sourceTree = SOURCE_ROOT;
@@ -210,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E36AFC208A184C00878C61 /* SocketManager.m in Sources */,
 				B2E36AF92089E6F800878C61 /* SocketPong.m in Sources */,
 				B2DB9EFE2086F9E800DFE21B /* ViewController.m in Sources */,
 				B2DB9F092086F9E900DFE21B /* main.m in Sources */,
