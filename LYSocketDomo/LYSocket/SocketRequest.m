@@ -33,17 +33,20 @@ static TCPSocket *_tcpScoket = nil;
         NSAssert(!_tcpScoket, @"请先调用(-setTcpSocket:appParam:co_param:)设置socket相关参数");
         return;
     }
-    [self socket:_tcpScoket apiName:apiName parameters:parameters success:success failure:failure];
+    [self socketWithApiName:apiName parameters:parameters success:success failure:failure];
 }
 
+// 发送数据
 + (void)socketWithApiName:(NSString *)apiName
                parameters:(id)parameters
                   success:(void (^)(id))success
                   failure:(void (^)(NSError *))failure{
     NSString *noti_name = [NSString stringWithFormat:@"ly_%@",apiName];
     
-    //
+    // 这里不懂，这里应该是回调出去的。居然在这里进行判断，这个写法是什么意思？所以无论怎么走都会走过来这个意思？
     if(success){
+        
+        // 每一次传，都把回调放在字典里这个操作？这是哪个设计模式？为什么不通过常规的代理或者Block？
         _successBlockDic[noti_name] = success;
     }
     if(failure){
@@ -58,15 +61,14 @@ static TCPSocket *_tcpScoket = nil;
     // 发送请求
     [_tcpScoket sendDataToSocket:[self formatCmdWithApiName:apiName parameters:parameters]];
     
+    // 发送超时的通知
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(requestTimeOut * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 如果不会失败，则不发。
         if(!_failureBlockDic[noti_name]){
             return ;
         }
         
         NSNotification *noti = [NSNotification notificationWithName:noti_name object:nil userInfo:@{@"-1" : @"request time out"}];
-        
-        
-//        [self get_result_noti:noti];
         
         [self get_result_noti:noti];
     });
@@ -157,7 +159,7 @@ static TCPSocket *_tcpScoket = nil;
  *
  *  @param timeOut 超时时间
  */
-+ (void)setSocketRequsetTimeOut:(NSTimeInterval)timeOut{
++ (void)setSocketRequestTimeOut:(NSTimeInterval)timeOut{
     
     requestTimeOut = timeOut;
     

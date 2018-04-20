@@ -19,13 +19,10 @@
  设置 socket 及协议格式参数
 
  @param tcpSocket TCPSocket
- @param appParam app default is "wifi"
- @param coParam co default is "kjd"
+ @param app_param app default is "wifi"
+ @param co_param co default is "kjd"
  */
-+ (void)setTcpSocket:(TCPSocket *)tcpSocket
-           appParam:(NSString *)appParam
-            coParam:(NSString *)coParam;
-
++ (void)setTcpSocket:(TCPSocket *)tcpSocket appParam:(NSString *)app_param co_param:(NSString *)co_param;
 
 
 /**
@@ -64,5 +61,5 @@
 
  @param timeOut 超时时间，默认是10s
  */
-+(void)setSocketRequestTimeOut:(NSTimeInterval)timeOut;
++ (void)setSocketRequestTimeOut:(NSTimeInterval)timeOut;
 @end
