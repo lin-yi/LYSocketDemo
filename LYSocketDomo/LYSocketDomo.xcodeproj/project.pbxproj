@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2BF93C3FC8F7351E079A6873 /* libPods-LYSocketDomo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A568F9D31DCFAFC76ECD4209 /* libPods-LYSocketDomo.a */; };
+		B2D7E6A82088A02F0028AB3B /* TCPSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D7E6A72088A02F0028AB3B /* TCPSocket.m */; };
 		B2DB9EFB2086F9E800DFE21B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DB9EFA2086F9E800DFE21B /* AppDelegate.m */; };
 		B2DB9EFE2086F9E800DFE21B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DB9EFD2086F9E800DFE21B /* ViewController.m */; };
 		B2DB9F012086F9E800DFE21B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DB9EFF2086F9E800DFE21B /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		A568F9D31DCFAFC76ECD4209 /* libPods-LYSocketDomo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYSocketDomo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2D7E6A62088A02F0028AB3B /* TCPSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPSocket.h; sourceTree = "<group>"; };
+		B2D7E6A72088A02F0028AB3B /* TCPSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCPSocket.m; sourceTree = "<group>"; };
 		B2DB9EF62086F9E800DFE21B /* LYSocketDomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYSocketDomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DB9EF92086F9E800DFE21B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B2DB9EFA2086F9E800DFE21B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,6 +55,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B2D7E6A520889E1C0028AB3B /* LYSocket */ = {
+			isa = PBXGroup;
+			children = (
+				B2D7E6A62088A02F0028AB3B /* TCPSocket.h */,
+				B2D7E6A72088A02F0028AB3B /* TCPSocket.m */,
+			);
+			path = LYSocket;
+			sourceTree = SOURCE_ROOT;
+		};
 		B2DB9EED2086F9E800DFE21B = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +89,7 @@
 				B2DB9EFA2086F9E800DFE21B /* AppDelegate.m */,
 				B2DB9EFC2086F9E800DFE21B /* ViewController.h */,
 				B2DB9EFD2086F9E800DFE21B /* ViewController.m */,
+				B2D7E6A520889E1C0028AB3B /* LYSocket */,
 				B2DB9EFF2086F9E800DFE21B /* Main.storyboard */,
 				B2DB9F022086F9E900DFE21B /* Assets.xcassets */,
 				B2DB9F042086F9E900DFE21B /* LaunchScreen.storyboard */,
@@ -189,6 +202,7 @@
 			files = (
 				B2DB9EFE2086F9E800DFE21B /* ViewController.m in Sources */,
 				B2DB9F092086F9E900DFE21B /* main.m in Sources */,
+				B2D7E6A82088A02F0028AB3B /* TCPSocket.m in Sources */,
 				B2DB9EFB2086F9E800DFE21B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
