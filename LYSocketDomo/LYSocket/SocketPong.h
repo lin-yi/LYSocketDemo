@@ -3,7 +3,7 @@
 //  LYSocketDomo
 //
 //  Created by 林一 on 2018/4/20.
-//  Copyright © 2018年 众车在线. All rights reserved.
+//  Copyright © 2018年 KJD. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -16,7 +16,7 @@
 
  @param failure 超时回调
  */
-+ (void)setSocketConnectPongFailure:(void(^)(id))failure;
++ (void)setSocketConnectPongFailure:(void(^)(void))failure;
 
 
 /**
